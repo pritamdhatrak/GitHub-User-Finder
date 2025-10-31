@@ -80,8 +80,9 @@ export default function GithubUserFinder() {
           <img src={user.avatar_url} alt={user.login} className="avatar" />
           <div className="user-info">
             <h3>
-              {user.name ? user.name : `@${user.login}`}
-              <span className="username"> @{user.login}</span>
+              {user.name ? user.name : ""}
+              {user.name && <span> </span>}
+              <span className="username">@{user.login}</span>
             </h3>
             <div className="stats">
               <span>{user.public_repos} Repos</span>

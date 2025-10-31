@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const initialMessage = "No user yet. Try searching for \"octocat\".";
+const initialMessage = 'No user yet. Try searching for "octocat".';
 
 export default function GithubUserFinder() {
   const [username, setUsername] = useState("");
@@ -53,7 +53,7 @@ export default function GithubUserFinder() {
     <div className="github-card">
       <h2>GitHub User Finder</h2>
       <p className="subtitle">
-        Search a Github username to see profile details.
+        Search a GitHub username to see profile details.
       </p>
       <form className="search-form" onSubmit={handleSearch} autoComplete="off">
         <input
@@ -80,8 +80,8 @@ export default function GithubUserFinder() {
           <img src={user.avatar_url} alt={user.login} className="avatar" />
           <div className="user-info">
             <h3>
-              {user.name ? user.name : user.login}
-              <span className="username"> ({user.login})</span>
+              {user.name ? user.name : `@${user.login}`}
+              <span className="username"> @{user.login}</span>
             </h3>
             <div className="stats">
               <span>{user.public_repos} Repos</span>
@@ -89,7 +89,7 @@ export default function GithubUserFinder() {
               <span>{user.following} Following</span>
             </div>
             <div className="details">
-              {user.location && <span>ÔøΩÔøΩ {user.location}</span>}
+              {user.location && <span>Ì≥ç {user.location}</span>}
               {user.twitter_username && (
                 <span>
                   &nbsp;Ì∞¶ @{user.twitter_username}
